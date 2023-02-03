@@ -1,0 +1,17 @@
+name: Content Management Interface
+version: '${project.version}'
+main: org.waffledevelopment.cmi.CMI
+api-version: 1.19
+authors: [ WaffleDevelopment ]
+description: a Custom CMI spigot Plugin Made by Waffle Lovers
+commands:
+  afk:
+    description: Toggle afk mode.
+  afkCheck:
+    description: Checks IF Player is AFK.
+  air:
+    description: Sets a Players Air Level.
+
+permissions:
+  WMI.admin:
+    description: Administrator permission.

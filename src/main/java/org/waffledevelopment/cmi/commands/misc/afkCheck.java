@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 /* Fun Fact: The AFK acronym has been around since the early days of internet culture,
    specifically in chat rooms in the 1990s. It even dates back to an online news
-   bulletin from FidoNews in 1989, alongside other emoticons and abbreviations
+   bulletin from FidoNews in 1989, alongside other emoticons and abbreviations.
 */
 
 public class afkCheck implements CommandExecutor{

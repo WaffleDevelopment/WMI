@@ -21,30 +21,36 @@ public class afkCheck implements CommandExecutor{
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            Player target = null;
-            if (args.length > 0) {
-                target = Bukkit.getPlayer(args[0]);
-            } else {
-                target = player;
-            }
-
-            if (target == null) {
-                sender.sendMessage("Player not found.");
-                return true;
-            }
-
-            // Check the AFK status of the target player
-            if (afkPlayers.containsKey(target.getUniqueId().toString())) {
-                sender.sendMessage(target.getName() + " is AFK.");
-            } else {
-                sender.sendMessage(target.getName() + " is not AFK.");
-            }
-        } else {
+        if (!(sender instanceof Player)) {
             sender.sendMessage("This command can only be used by players.");
             return true;
         }
+
+        if(!sender.hasPermission("WMI.command.afkcheck")) {
+            sender.sendMessage("You do not have permission to use this command.");
+            return true;
+        }
+
+        Player player = (Player) sender;
+        Player target = null;
+        if (args.length > 0) {
+            target = Bukkit.getPlayer(args[0]);
+        } else {
+            target = player;
+        }
+
+        if (target == null) {
+            sender.sendMessage("Player not found.");
+            return true;
+        }
+
+        // Check the AFK status of the target player
+        if (afkPlayers.containsKey(target.getUniqueId().toString())) {
+            sender.sendMessage(target.getName() + " is AFK.");
+        } else {
+            sender.sendMessage(target.getName() + " is not AFK.");
+        }
+
         return true;
     }
 }

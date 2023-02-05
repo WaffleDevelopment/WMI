@@ -1,9 +1,13 @@
 package org.waffledevelopment.cmi;
 
 import org.bukkit.plugin.java.JavaPlugin;
+
 import org.waffledevelopment.cmi.commands.misc.afk;
 import org.waffledevelopment.cmi.commands.misc.afkCheck;
 import org.waffledevelopment.cmi.commands.misc.air;
+import org.waffledevelopment.cmi.commands.moderation.sudo;
+import org.waffledevelopment.cmi.commands.moderation.ban;
+
 
 public final class CMI extends JavaPlugin {
 
@@ -24,6 +28,8 @@ public final class CMI extends JavaPlugin {
         getCommand("afk").setExecutor(new afk());
         getCommand("afkCheck").setExecutor(new afkCheck());
         getCommand("air").setExecutor(new air());
+        getCommand("sudo").setExecutor(new sudo());
+        getCommand("ban").setExecutor(new ban());
 
     }
 

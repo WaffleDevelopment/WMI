@@ -15,3 +15,11 @@ commands:
 permissions:
   WMI.admin:
     description: Administrator permission.
+  WMI.command.ban:
+    description: Permission to use ban Command
+  WMI.command.ban.bypass:
+    description: Permission to bypass Ban
+  WMI.command.sudo:
+    description: Permission to use sudo Command.
+  WMI.command.afkcheck:
+    description: Permission to use afkcheck command.

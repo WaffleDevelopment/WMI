@@ -22,4 +22,4 @@ permissions:
   WMI.command.sudo:
     description: Permission to use sudo Command.
   WMI.command.afkcheck:
-    description: Permission to use afkcheck command.
+    description: Permission to use afkCheck command.
